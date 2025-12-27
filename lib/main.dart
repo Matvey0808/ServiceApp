@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:provider/provider.dart';
-import 'views/onboarding_view.dart';
+import 'package:serviceapp/views/splash_view.dart';
 
 void main() async {
     WidgetsFlutterBinding.ensureInitialized();
@@ -17,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: OnboardingScreen(),
+      home: SplashView(),
     );
   }
 }
