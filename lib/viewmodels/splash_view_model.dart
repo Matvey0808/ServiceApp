@@ -16,6 +16,7 @@ class SplashViewModel extends ChangeNotifier {
     await Future.delayed(const Duration(seconds: 3));
 
     _isLoading = false;
+    _nextRoute = '/registration';
     notifyListeners();
   }
 }

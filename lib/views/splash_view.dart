@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:serviceapp/models/splash_model.dart';
 import 'package:provider/provider.dart';
 import 'package:serviceapp/viewmodels/splash_view_model.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class SplashView extends StatelessWidget {
   final SplashModels model;
@@ -48,8 +49,11 @@ class SplashView extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   viewModel.isLoading
-                      ? CircularProgressIndicator()
-                      : Text("testProgress"),
+                      ? SpinKitCircle(
+                        color: Colors.black26,
+                        size: width * 0.09,
+                        )
+                      : Text(""),
                   Text(
                     model.title,
                     style: GoogleFonts.acme(
